@@ -1,111 +1,78 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: black;
-}
-
 *{
-  font-family: "Playwrite NG Modern", cursive;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  color:rgb(200,200,200);
+	background-color: #96d86d;
+	font-family: "Ubuntu",sans-serif;
+	color: #152d0a;
 }
 
-/*Navbar Css*/
+/*Navbar*/
 
-.Navbar{
+nav{
+	position: absolute;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+	justify-contents: center;
 	align-items: center;
-	z-index: 2;
-	background: transparent;
-	position: fixed;
-
 }
-
-.Navbar .logo{
-	margin-left:1rem;
-	justify-content: center;
-	align-items: center;
-	z-index: 2;
-}
-
-
-.Navbar ul{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
+nav div ul {
 	list-style: none;
-	margin-right: 3rem;
-	z-index: 2;
+	display: flex;
+	flex-direction: row;
+}
+nav div ul li{
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
 }
 
-.Navbar ul li{
-	margin-left: 1rem;
-	margin-right: 1rem;
-	z-index: 2;
+.logo{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-left: 3rem;
+	font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
-.NavbarLinks{
+.navLink{
 	text-decoration: none;
-	transition: 0.7s;
-	z-index: 2;
+	border-radius: 1rem;
+	padding-top:0.7rem;
+	padding-bottom:0.7rem;
+	padding-right:1.5rem;
+	padding-left:1.5rem;
+	transition: 0.8s;
 }
 
-.NavbarLinks:hover{
-	font-size: 1rem;
-	color:white;
-	z-index: 2;
+.navLink:hover{
+	background-color: #152d0a;
+	color:#96d86d;
+}
+
+#selected{
+	background-color: #152d0a;
+	color:#96d86d;
 }
 
 /*Home Section*/
-#home{
-	z-index: 1;
-	height: 100vh;
-	width: 100vw;
-	background-image: url("Images/background.jpg");
-
-	background-position: center;
-	background-size: 100%;
-	background-repeat: no-repeat;
-	/*filter: blur(8px);
-  	-webkit-filter: blur(8px);*/
-  	justify-content: center;
-  	align-items: center;
-
-}
-
-.SomeInfo{
-	z-index: 1000;
-	color: white;
-	text-align: center;
-	padding-top: 5rem;
+section{
+	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+.WelcomeText{
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	width: 50%;
+  text-align: center;
+  margin-top: 2rem;
 }
-.SomeInfo h1{
-	font-size: 3rem;
-	text-align: center;
-}
-.SomeInfo p{
-	text-align: center;
-}
-/*About Section*/
-#about{
-	z-index: 1;
-	height: 100vh;
-	width: 100vw;
-	background-image: url("Images/background.jpg");
 
-	background-position: center;
-	background-size: 100%;
-	background-repeat: no-repeat;
-	/*filter: blur(8px);
-  	-webkit-filter: blur(8px);*/
-
+#heading{
+	font-family: "Exo 2", sans-serif;
+  font-size: 5rem;
+  font-weight: bold;
 }

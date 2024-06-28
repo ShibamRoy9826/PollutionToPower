@@ -1,0 +1,40 @@
+*{
+  font-family: "Playwrite NG Modern", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  background-color: rgb(0,0,0);
+  color:white;
+}
+
+/*Navbar Css*/
+
+.Navbar{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.Navbar .logo{
+	margin-left:1rem;
+	justify-content: center;
+	align-items: center;
+}
+
+.Navbar ul{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	margin-right: 3rem;
+}
+
+.Navbar ul li{
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+.NavbarLinks{
+	text-decoration: none;
+}

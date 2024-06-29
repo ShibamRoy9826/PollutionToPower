@@ -3,7 +3,14 @@
 	font-family: "Ubuntu",sans-serif;
 	color: #152d0a;
 	margin:0;
-	scroll-behavior: smooth;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+*::-webkit-scrollbar {
+	  display: none; /* For Chrome, Safari, and Opera */
+}
+body {
+	overflow-x: hidden;
 }
 
 /*Navbar*/
@@ -11,10 +18,11 @@
 nav{
 	position: absolute;
 	display: flex;
-	flex-direction: row;
-	justify-contents: center;
+	width: 100vw;
+	justify-content: space-around;
 	align-items: center;
 	margin-top: 1.5rem;
+	z-index: 1000;
 }
 nav div ul {
 	list-style: none;
@@ -57,19 +65,42 @@ nav div ul li{
 	color:#96d86d;
 }
 
+/* responsive nav */
+@media(max-width: 768px){
+	nav div ul li{
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.navLink {
+		padding-right:.5rem;
+		padding-left:.5rem;
+
+	}
+	nav div ul {
+		padding: 0;
+	}
+}
+@media(max-width: 392px){
+	.logo h2 {
+		display: none;
+	}
+}
+
+
+
 /*Home Section*/
 #home{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+	padding-top: 4rem;
 }
 .WelcomeText{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
-	width: 50vw;
     text-align: center;
     position: relative;
     margin-left: 2rem;
@@ -89,7 +120,7 @@ nav div ul li{
 
 #heading{
 	font-family: "Exo 2", sans-serif;
-  font-size: 5rem;
+font-size: 5rem;
   font-weight: bold;
   margin-bottom: 0.7rem;
 }
@@ -102,6 +133,34 @@ nav div ul li{
 	margin-bottom: 2rem;
 	width: 70%;
 }
+
+/*Responsive Home*/
+@media(max-width: 768px){
+	.WelcomeText {
+		margin-left: 0;
+	}
+
+	#heading {
+		font-size: 3rem;
+	}
+	.image1 {
+		display: none;
+	}
+	#home {
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+@media(max-width: 255px){
+	#heading {
+		font-size: 1.3em;
+	}
+	.coolButton {
+		font-size: 1.3em;
+	}
+}
+
 /*About section*/
 #about{
 	background-color: yellow;
@@ -109,7 +168,6 @@ nav div ul li{
 	justify-content: center;
 	align-items: center;
 	flex-direction: row;
-	height: 70vh;
 
 }
 .About{
@@ -137,6 +195,17 @@ nav div ul li{
 	background-color: yellow;
 }
 
+/*Responsive About*/
+@media(max-width: 768px){
+	.About {
+		margin: 0;
+	}
+}
+@media(max-width: 255px){
+	#about-heading{
+		font-size : 1.6em;
+	}
+}
 /*Data Sources section*/
 #data-sources{
   background-color: #96d86d;
@@ -175,11 +244,23 @@ nav div ul li{
   text-align: center;
 }
 
+/*Responsive About*/
+@media(max-width: 768px){
+	.DataSourcesContainer {
+		margin-left: 0;
+	}
+}
+@media(max-width: 294px){
+	#data-heading {
+		font-size: 2em;
+	}
+}
 /*Other things*/
 
 section{
 	width: 100vw;
-	height: 90vh;
+	min-height: 80vh;
+	min-height: 80svh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -220,13 +301,11 @@ footer{
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	height: 5vh;
 	width: 100vw;
 	background-color: #1e361a;
 	justify-content: center;
 	align-items: center;
-	padding-top:2rem;
-	padding-bottom:2rem;
+	padding-bottom:1em;
 	margin:0;
 }
 
@@ -289,4 +368,11 @@ footer ul li{
 	.logo{
 		margin-left: 0.5rem;
 	}
+}
+@media(max-width: 255px){
+	
+	footer h1 {
+		font-size: 1.5em;
+	}
+	
 }

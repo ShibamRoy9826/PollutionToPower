@@ -57,23 +57,34 @@ nav div ul li{
 }
 
 /*Home Section*/
-section{
-	width: 100vw;
-	height: 80vh;
+#home{
 	display: flex;
-	justify-content: center;
+	flex-direction: row;
 	align-items: center;
+	justify-content: center;
 }
 .WelcomeText{
-
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	width: 50%;
+	justify-content: flex-start;
+	width: 50vw;
     text-align: center;
     position: relative;
+    margin-left: 2rem;
+    flex:1;
 }
+
+.image1{
+	max-width: 35vw;
+	height: 50%;
+	border-radius: 2rem;
+	border: 3px solid #192f10;
+	flex:2;
+	margin-right: 2rem;
+	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
 
 #heading{
 	font-family: "Exo 2", sans-serif;
@@ -88,10 +99,90 @@ section{
 #para{
 	margin: 0.7rem;
 	margin-bottom: 2rem;
+	width: 70%;
+}
+/*About section*/
+#about{
+	background-color: yellow;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	height: 70vh;
+
+}
+.About{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: yellow;
+	margin-left: 2rem;
+	flex:1;
+}
+#about-heading{
+	font-family: "Exo 2", sans-serif;
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 0.7rem;
+  background-color: yellow;
+}
+
+
+#about-para{
+	margin: 0.7rem;
+	margin-bottom: 2rem;
+	width: 70%;
+	background-color: yellow;
+}
+
+/*Data Sources section*/
+#data-sources{
+  background-color: #96d86d;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	height: 70vh;
+
+}
+.DataSourcesContainer{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: yellow;
+	margin-left: 2rem;
+	flex:1;
+  background-color: #96d86d;
+}
+#data-heading{
+	font-family: "Exo 2", sans-serif;
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 0.7rem;
+  background-color: #96d86d;
+}
+
+
+#data-para{
+	margin-top: 0.7rem;
+	margin-bottom: 2rem;
+	width: 70%;
+	background-color: yellow;
+  background-color: #96d86d;
+  text-align: center;
 }
 
 /*Other things*/
 
+section{
+	width: 100vw;
+	height: 90vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 .coolButton{
 	border-radius: 1rem;
 	padding-left: 1rem;
@@ -127,6 +218,7 @@ section{
 footer{
 	position: relative;
 	display: flex;
+	flex-direction: column;
 	height: 5vh;
 	width: 100vw;
 	background-color: #1e361a;
@@ -137,7 +229,29 @@ footer{
 	margin:0;
 }
 
-#footerLinks{
+footer h1{
+	color: #98d776;
+	background-color: #1f361b;
+}
+
+footer p{
+	color:#98d776;
+	background-color: #1f361b;
+	width: 40%;
+	text-align: center;
+	margin:1rem;
+}
+
+footer p a{
+	color:#98d776;
+	background-color: #1f361b;
+	width: 40%;
+	text-align: center;
+
+}
+
+
+/*#footerLinks{
 	display: flex;
 	flex-direction: row;
 	list-style: none;
@@ -159,7 +273,7 @@ footer ul li{
 
 }
 
-
+*/
 
 
 /*Media queries*/

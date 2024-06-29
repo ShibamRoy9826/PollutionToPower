@@ -16,8 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-
+from landing import views as landingView
+from projects import views as projectView
 urlpatterns = [
-    path('', include("landing.urls")),
+    path('', landingView.home, name="landingPage"),
+    path('project/',projectView.allProjects, name="allProjects"),
     path('admin/', admin.site.urls),
+    path('carbonCalc/',projectView.carbonCalculator,name="carbonCalc"),
+    path('localityReport/',projectView.localityReport,name="localityReport"),
+    path('carbonResults/',projectView.carbonResults,name="carbonResults"),
+    path('localityReportResults/',projectView.localityReportResults,name="localityResults")
+
 ]

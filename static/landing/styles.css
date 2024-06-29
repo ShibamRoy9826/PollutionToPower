@@ -259,6 +259,8 @@ font-size: 5rem;
 
 section{
 	width: 100vw;
+	min-height: 80vh;
+	min-height: 80svh;
 	display: flex;
 	justify-content: center;
 	align-items: center;

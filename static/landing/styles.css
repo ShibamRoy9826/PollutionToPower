@@ -2,6 +2,7 @@
 	background-color: #96d86d;
 	font-family: "Ubuntu",sans-serif;
 	color: #152d0a;
+	margin:0;
 }
 
 /*Navbar*/
@@ -12,6 +13,7 @@ nav{
 	flex-direction: row;
 	justify-contents: center;
 	align-items: center;
+	margin-top: 1.5rem;
 }
 nav div ul {
 	list-style: none;
@@ -56,6 +58,8 @@ nav div ul li{
 
 /*Home Section*/
 section{
+	width: 100vw;
+	height: 80vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -67,12 +71,107 @@ section{
 	align-items: center;
 	justify-content: center;
 	width: 50%;
-  text-align: center;
-  margin-top: 2rem;
+    text-align: center;
+    position: relative;
 }
 
 #heading{
 	font-family: "Exo 2", sans-serif;
   font-size: 5rem;
   font-weight: bold;
+  margin-bottom: 0.7rem;
+}
+
+#sub-heading{
+	margin: 0.7rem;
+}
+#para{
+	margin: 0.7rem;
+	margin-bottom: 2rem;
+}
+
+/*Other things*/
+
+.coolButton{
+	border-radius: 1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 0.8rem;
+	padding-bottom: 0.8rem;
+	background-color: #152d0a;
+	color: #96d86d;
+	font-size: 2rem;
+	text-decoration: none;
+	border: 2px solid #303c2b;
+	transition: 0.6s;
+	&:hover,
+  	&:focus { 
+   	 border-color: var(--hover);
+   	 color: #16a046;
+  }
+}
+
+.coolButton:hover,
+.coolButton:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+
+/*Curves*/
+
+.wavyCurve{
+	display: flex;
+}
+/*Footer*/
+footer{
+	position: relative;
+	display: flex;
+	height: 5vh;
+	width: 100vw;
+	background-color: #1e361a;
+	justify-content: center;
+	align-items: center;
+	padding-top:2rem;
+	padding-bottom:2rem;
+	margin:0;
+}
+
+#footerLinks{
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	background-color: #1e361a;
+}
+
+footer ul li{
+	background-color: #1e361a;
+
+}
+
+.link{
+	color:white;
+	display: flex;
+	flex-direction: column;
+	background-color: #1e361a;
+	margin: 1rem;
+	text-decoration: none;
+
+}
+
+
+
+
+/*Media queries*/
+
+@media(max-width: 768px){
+	.links{
+		display: hidden;
+	}
+	.WelcomeText{
+		width: 100%;
+	}
+	.logo{
+		margin-left: 0.5rem;
+	}
 }

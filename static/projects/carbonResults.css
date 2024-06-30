@@ -96,7 +96,7 @@ nav div ul li{
 	background-color: #152d0a;
 	color: #96d86d;
 	border-radius: 2rem;
-	padding:2rem;
+	padding:4rem;
 	max-width: 40%;
 	padding-bottom: 4rem;
 	padding-top: 4rem;
@@ -117,6 +117,14 @@ nav div ul li{
 	background-color: #152d0a;
 	color: #96d86d;
 }
+
+.extraContainer{
+	background-color: #152d0a;
+	color: #96d86d;
+	list-style: disk;
+}
+
+
 .bigTextScore{
 	background-color: #152d0a;
 	color: #96d86d;

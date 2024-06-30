@@ -28,10 +28,24 @@
 <!-- Results -->
 <section id="score">
   <div class="Results">
+  	<!-- DUMMY AQI INDEX -->
     <h1>24.5 AQI </h1>
-    <h4>is the air quality</h4>
+    <h4 style="text-align: center;">is the air quality</h4>
 
-    <div class="Info">   
+    <h4 style="margin:1rem;">Some detailed info:</h4>
+
+    <div class="Info">
+    <ul class="custom-list">
+        <li class="ExtraData">CO: {{ co }} µg/m³</li>
+        <li class="ExtraData">NO: {{ no }} µg/m³</li>
+        <li class="ExtraData">NO2: {{ no2 }} µg/m³</li>
+        <li class="ExtraData">O3: {{ o3 }} µg/m³</li>
+        <li class="ExtraData">SO2: {{ so2 }} µg/m³</li>
+        <li class="ExtraData">PM2.5: {{ pm2_5 }} µg/m³</li>
+        <li class="ExtraData">PM10: {{ pm10 }} µg/m³</li>
+        <li class="ExtraData">NH3: {{ nh3 }} µg/m³</li>
+    </ul>
+     
               
     </div>
   </div>
@@ -40,7 +54,11 @@
     <h1 class="bigTextScore">Suggestions/Info:</h1>
 
     <ul class="custom-list">
-            
+            {% for suggestion in suggestions %}
+            <li>
+            <span class="list-icon">&#8227;</span> {{ suggestion }}
+          </li>
+            {% endfor %}
         </ul>
     
   </div>

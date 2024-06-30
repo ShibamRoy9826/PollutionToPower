@@ -5,6 +5,12 @@ from django.http import HttpResponse
 import os
 from projects import carbonFootprint
 import numpy
+import requests
+from geopy.geocoders import Nominatim
+
+key="HIDDEN:)"
+
+
 
 # Create your views here.
 def allProjects(request):
@@ -58,6 +64,37 @@ def carbonResults(request):
 	except Exception as e:
 		return HttpResponse(e)
 		
-def localityReportResults(request):
-	return render(request,"LocalityReport/LocalityReportResults.html")
+# Locality Report Results
 
+
+def AQI(lat,lon):
+    url = f'http://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={lon}&appid={key}'   
+    response = requests.get(url)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return None
+
+	
+def get_lat_lon(country, state, city):
+    geolocator = Nominatim(user_agent="air_quality_app")
+    location = geolocator.geocode(f"{city}, {state}, {country}")
+    if location:
+        return location.latitude, location.longitude
+    else:
+        return None
+
+def localityReportResults(request):
+	try:
+		# Example usage
+		country = request.GET["Country"]
+		state = request.GET["State"]
+		city = request.GET["City"]
+		lat_lon = get_lat_lon(country, state, city)
+
+		data=AQI(lat_lon[0],lat_lon[1])
+
+		return render(request,"LocalityReport/LocalityReportResults.html",data)
+
+	except Exception as e:
+		return HttpResponse(e)

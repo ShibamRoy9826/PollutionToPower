@@ -1,7 +1,7 @@
 import pandas
 
-
-d=pandas.read_csv("importantData.csv")
+# Absolute path temporarily
+d=pandas.read_csv("/home/shibamroy/Treasure/EarthSight/projects/importantData.csv")
 
 # Data vars
 ElecCO2={'Hydropower':20,'Gas':490,'Oil':730,'Coal':820,'Nuclear':40,'Wind':11}

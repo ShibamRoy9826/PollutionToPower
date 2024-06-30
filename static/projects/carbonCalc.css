@@ -86,62 +86,59 @@ nav div ul li{
 	}
 }
 
-/*Projects container*/
-.project-container{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-}
-
-.project-card{
+/*Form*/
+.container{
+	background-color: #1f371c;
+	padding:2rem;
 	display: flex;
 	flex-direction: column;
+	border-radius: 2rem;
+	width: 80%;
+}
+.container h1{
+	text-align:center;
+	background-color: #1f371c;
+	color:#89cd6f;
+	font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 3rem;
+}
+form{
+	background-color: #1f371c;
+	padding:2rem;
+	display: flex;
+	flex-direction: column;
+	border-radius: 2rem;
 	justify-content: center;
 	align-items: center;
-	padding:3rem;
-	background-color: #152d0a;
-	color: #96d86d;
-	font-size: 2rem;
-	text-decoration: none;
-	border: 2px solid #303c2b;
-	transition: 0.6s;
-	border-radius: 2rem;
-	margin:2rem;
-	max-width: 20vw;
+
 }
-
-.project-card:hover{
-	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-}
-
-
-.project-card p{
+form input{
+	background-color:  #1f371c;
+	width: 80%;
+	margin: 1rem;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-color: #86c16f;
+	color: #86c16f;
 	text-align: center;
-	color: #96d86d;
-	background-color: #152d0a;
-	font-size: 0;
-	width: 0;
-	height: 0;
-	transition: 0.5s;
+	padding: 1rem;
 }
-.project-card:hover p{
-	display: block;
-	width: 70%;
-	height: 100%;
+#submitButton{
+	max-width: 10%;
 	font-size: 1rem;
+	margin-top: 1.5rem;
 
 }
-.project-card h3{
-	color: #96d86d;
-	background-color: #152d0a;
-}
+
 /*Other things*/
 
 section{
 	width: 100vw;
-	min-height: 80vh;
-	min-height: 80svh;
+	min-height: 100vh;
+	min-height: 100svh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -251,22 +248,10 @@ footer ul li{
 	.logo{
 		margin-left: 0.5rem;
 	}
-	.project-container{
-		display: flex;
-		flex-direction: column;
 }
-	.project-card{
-		padding:4rem;
-		margin: 1rem;
-	}
-	#carbon-card{
-		margin-top: 4rem;
-	}
 
-}
 @media(max-width: 255px){
 	footer h1 {
 		font-size: 1.5em;
 	}
-	
 }

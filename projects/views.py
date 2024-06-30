@@ -23,6 +23,7 @@ def carbonResults(request):
 		landdist=request.GET['LandDist']
 		elecbill=request.GET['ElecBill']
 		gasbill=request.GET['GasBill']
+		moreThanAvg=False
 
 		found,ans,dailyV,airV,landV,elec,gas=carbonFootprint.CalculateTotal(country,daildist,airdist,landdist,elecbill,gasbill)
 
@@ -49,11 +50,11 @@ def carbonResults(request):
 		per_Cap=carbonFootprint.getPerCapita(country)
 
 		if ans>per_Cap:
-			rec.append("Your carbon emmisions are higher than the country average!")
+			moreThanAvg=True
 		else:
-			rec.append("Your carbon emmision are lower than the country average:)")
-		data={'carbon':ans,'dailyV':dailyV,'airV':airV,'landV':landV,'elec':elec,'gas':gas,'recommendations':rec,'found':found}
-		return render(request,'results/results.html',data)
+			moreThanAvg=False
+		data={'carbon':ans,'dailyV':dailyV,'airV':airV,'landV':landV,'elec':elec,'gas':gas,'recommendations':rec,'found':found,"moreThanAvg":moreThanAvg,"perCap":per_Cap}
+		return render(request,'CarbonCalculator/CarbonCalculatorResults.html',data)
 	except Exception as e:
 		return HttpResponse(e)
 		

@@ -1,11 +1,108 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>EarthSight: Carbon Emission Results</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'projects/carbonResults.css' %}">
+
 </head>
 <body>
-These are the results for your data
+  <!-- Navbar -->
+<nav>
+  <div class="logo">
+    <h2>EarthSight</h2>
+  </div>
+
+  <div class="links"> 
+    <ul>
+      <li ><a href="/" class="navLink" >Home</a></li>
+      <li ><a href="/#about" class="navLink">About</a></li>
+      <li ><a href="/project" class="navLink" id="selected">Project</a></li>
+      <li ><a href="/contact" class="navLink">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Results -->
+<section id="score">
+  <div class="Results">
+    <h1>{{carbon}} Tonnes</h1>
+    <h4>is your total annual carbon emissions</h4>
+
+    <div class="Info">   
+       <!-- Whether Good Score -->
+        {% if carbon > 2.5 %}
+        <h2 class="bigTextScore">
+          - It's Not a Good Score
+        </h2>
+        {% else %}
+        <h2 class="bigTextScore">
+          - It's A Good Score
+        </h2>
+        {% endif %}</h1>
+
+        <!-- Whether more than coutry avg -->
+        {% if moreThanAvg %}
+        <h2 class="bigTextScore">
+          - More than Average ( {{ perCap }} )
+        </h2>
+        {% else %}
+        <h2 class="bigTextScore">
+          - Less than Average ( {{ perCap }} )
+        </h2>
+        {% endif %}</h1>
+
+        <!-- If the country was not found -->
+        {% if found %}
+        <h4 style="width:80%; text-align: center; margin-top:1rem;">Sorry, your country was not found, the global average was used instead</h4>
+        {% endif %}
+
+        <!-- Some Info -->
+        <h4 style="width:80%; text-align: center; margin-top:1rem;">Carbon emmissions must be kept under control, as it has started to become a huge global issue.You can use this calculator frequently to ensure proper carbon emmissions.</h4>
+
+    </div>
+  </div>
+  <!-- Recommendations -->
+  <div class="Recommendations">
+    <h1 class="bigTextScore">Suggestions/Info:</h1>
+
+    <ul class="custom-list">
+            {% for recom in recommendations %}
+            <li>
+            <span class="list-icon">&#8227;</span> {{ recom }}
+          </li>
+            {% endfor %}
+          <li>
+            <span class="list-icon">&#8227;</span> Your contributions to carbon dioxide with electricity is {{ elec }} %
+          </li>
+          <li>
+            <span class="list-icon">&#8227;</span> Your contributions to carbon dioxide with air vehicles is {{ airV }} %
+          </li>
+          <li>
+            <span class="list-icon">&#8227;</span> Your contributions to carbon dioxide with land vehicles  for long distances is {{ landV }} %
+          </li>
+          <li>
+            <span class="list-icon">&#8227;</span> Your contributions to carbon dioxide with daily vehicles is {{ dailyV }} %
+          </li>
+          <li>
+            <span class="list-icon">&#8227;</span> Your contributions to carbon dioxide with natural gas is {{ gas }} %
+          </li>
+        </ul>
+    
+  </div>
+    
+</section>
+
+<!-- Footer -->
+<div class="wavyCurve">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1f391a" fill-opacity="1" d="M0,128L48,128C96,128,192,128,288,149.3C384,171,480,213,576,208C672,203,768,149,864,133.3C960,117,1056,139,1152,144C1248,149,1344,139,1392,133.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+</div>
+<footer>
+
+  <h1>EarthSight</h1>
+  <p>We love to conserve the nature and so should you! hope you enjoy our website and get in the movement to promote more sustainable development!You can check the project code <a href="https://github.com/ShibamRoy9826/EarthSight">here</a></p>
+</footer>
 </body>
 </html>

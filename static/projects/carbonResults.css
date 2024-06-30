@@ -86,62 +86,78 @@ nav div ul li{
 	}
 }
 
-/*Projects container*/
-.project-container{
-	display: flex;
+/*Results*/
+#score{
 	flex-direction: row;
-	justify-content: center;
-	align-items: center;
+	justify-content: space-evenly;
 }
 
-.project-card{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding:3rem;
+.Results{
+	background-color: #152d0a;
+	color: #96d86d;
+	border-radius: 2rem;
+	padding:2rem;
+	max-width: 40%;
+	padding-bottom: 4rem;
+	padding-top: 4rem;
+}
+.Results h1{
+	background-color: #152d0a;
+	color: #96d86d;
+	font-size: 3rem;
+}
+.Results h4{
+	background-color: #152d0a;
+	color: #96d86d;
+	font-size: 1rem;
+}
+
+.Info{
+	margin-top: 1rem;
+	background-color: #152d0a;
+	color: #96d86d;
+}
+.bigTextScore{
 	background-color: #152d0a;
 	color: #96d86d;
 	font-size: 2rem;
-	text-decoration: none;
-	border: 2px solid #303c2b;
-	transition: 0.6s;
+}
+
+.Recommendations{
+	background-color: #152d0a;
+	color: #96d86d;
+	max-width: 40%;
 	border-radius: 2rem;
-	margin:2rem;
-	max-width: 20vw;
+	padding:2rem;
+	padding-bottom: 4rem;
+	padding-top: 4rem;
 }
 
-.project-card:hover{
-	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-}
-
-
-.project-card p{
-	text-align: center;
-	color: #96d86d;
+.Recommendations h1{
 	background-color: #152d0a;
-	font-size: 0;
-	width: 0;
-	height: 0;
-	transition: 0.5s;
-}
-.project-card:hover p{
-	display: block;
-	width: 70%;
-	height: 100%;
-	font-size: 1rem;
 
-}
-.project-card h3{
 	color: #96d86d;
+}
+.custom-list{
 	background-color: #152d0a;
+	color: #96d86d;
+	margin-top: 1rem;
+}
+.custom-list li{
+	background-color: #152d0a;
+	color: #96d86d;
+	font-size: 1.3rem;
+}
+.custom-list li span{
+	background-color: #152d0a;
+	color: #96d86d;
 }
 /*Other things*/
 
 section{
 	width: 100vw;
-	min-height: 80vh;
-	min-height: 80svh;
+	min-height: 100vh;
+	min-height: 100svh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -251,22 +267,10 @@ footer ul li{
 	.logo{
 		margin-left: 0.5rem;
 	}
-	.project-container{
-		display: flex;
-		flex-direction: column;
 }
-	.project-card{
-		padding:4rem;
-		margin: 1rem;
-	}
-	#carbon-card{
-		margin-top: 4rem;
-	}
 
-}
 @media(max-width: 255px){
 	footer h1 {
 		font-size: 1.5em;
 	}
-	
 }

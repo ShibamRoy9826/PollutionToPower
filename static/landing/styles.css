@@ -5,6 +5,7 @@
 	margin:0;
 	scrollbar-width: none;
 	-ms-overflow-style: none;
+	scroll-behavior: smooth;
 }
 *::-webkit-scrollbar {
 	  display: none; /* For Chrome, Safari, and Opera */

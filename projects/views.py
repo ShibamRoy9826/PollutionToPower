@@ -8,7 +8,7 @@ import numpy
 import requests
 from geopy.geocoders import Nominatim
 
-key="1ed6c763cfdd3d32f080560f67e721e6"
+key="HIDDEN:)"
 
 
 

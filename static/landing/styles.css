@@ -112,7 +112,7 @@ nav div ul li{
 }
 
 .image1{
-	max-width: 20vw;
+	max-width: 35vw;
 	height: 50%;
 	border-radius: 2rem;
 	border: 3px solid #192f10;
@@ -138,6 +138,7 @@ nav div ul li{
 }
 
 
+
 #heading{
 	font-family: "Exo 2", sans-serif;
 font-size: 5rem;
@@ -147,7 +148,6 @@ font-size: 5rem;
 
 #sub-heading{
 	margin: 0.7rem;
-
 }
 #para{
 	margin: 0.7rem;

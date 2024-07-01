@@ -94,6 +94,7 @@ nav div ul li{
 	flex-direction: column;
 	border-radius: 2rem;
 	width: 80%;
+	margin-top: 4rem;
 }
 .container h1{
 	text-align:center;
@@ -114,6 +115,16 @@ form{
 	align-items: center;
 
 }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 form input{
 	background-color:  #1f371c;
 	width: 80%;
@@ -127,7 +138,7 @@ form input{
 	padding: 1rem;
 }
 #submitButton{
-	max-width: 10%;
+	max-width: fit-content;
 	font-size: 1rem;
 	margin-top: 1.5rem;
 

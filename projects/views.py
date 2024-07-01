@@ -8,7 +8,7 @@ import numpy
 import requests
 from geopy.geocoders import Nominatim
 
-key="HIDDEN:)"
+key="1ed6c763cfdd3d32f080560f67e721e6"
 
 
 
@@ -23,7 +23,7 @@ def localityReport(request):
 def carbonResults(request):
 	try:
 		# Arguments to be passed to it
-		country=request.GET['Country']
+		country=request.GET['Country'].lower()
 		daildist=request.GET['DailyDist']
 		airdist=request.GET['AirDist']
 		landdist=request.GET['LandDist']

@@ -41,7 +41,8 @@ def CalculateTotal(Country, DailyDist, LongDistLand, LongDistAir, ElecBill , Gas
 
         return found,total,getPercentage(NVehiclePerYear,total),getPercentage(AirVehiclePerYear,total),getPercentage(LandVehiclePerYear,total),getPercentage(ElecMonthly*12,total),getPercentage(NGMonthly*12,total)
 
-    except:
+    except Exception as e:
+        print(e)
         SourceElec=d[d['country'] == 'Avg']['major_power_source'].values[0]
         PriceElec=d[d['country']=='Avg']['AvgPrice'].values[0]
         KwHElec=(float(ElecBill)/float(PriceElec))

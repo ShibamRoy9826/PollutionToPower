@@ -75,7 +75,6 @@ nav div ul li{
 	.navLink {
 		padding-right:.5rem;
 		padding-left:.5rem;
-
 	}
 	nav div ul {
 		padding: 0;
@@ -84,6 +83,10 @@ nav div ul li{
 @media(max-width: 392px){
 	.logo h2 {
 		display: none;
+	}
+	.navlink {
+		border-radius: 0;
+
 	}
 }
 

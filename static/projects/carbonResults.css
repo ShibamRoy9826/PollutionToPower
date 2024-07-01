@@ -88,16 +88,24 @@ nav div ul li{
 
 /*Results*/
 #score{
+	padding-top: 4rem;
 	flex-direction: row;
 	justify-content: space-evenly;
+	gap: 2em;
 }
 
+
+@media(max-width: 950px){
+	#score {
+		flex-direction: column;
+	}
+}
 .Results{
 	background-color: #152d0a;
 	color: #96d86d;
 	border-radius: 2rem;
 	padding:4rem;
-	max-width: 40%;
+	max-width: 10em;
 	padding-bottom: 4rem;
 	padding-top: 4rem;
 }
@@ -110,6 +118,12 @@ nav div ul li{
 	background-color: #152d0a;
 	color: #96d86d;
 	font-size: 1rem;
+}
+
+@media(max-width: 600px){
+	.Results  {
+
+	}
 }
 
 .Info{
@@ -134,7 +148,7 @@ nav div ul li{
 .Recommendations{
 	background-color: #152d0a;
 	color: #96d86d;
-	max-width: 40%;
+	max-width: 10em;
 	border-radius: 2rem;
 	padding:2rem;
 	padding-bottom: 4rem;

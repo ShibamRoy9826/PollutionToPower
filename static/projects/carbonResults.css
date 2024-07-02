@@ -89,7 +89,7 @@ nav div ul li{
 /*Results*/
 #score{
 	padding-top: 4rem;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: space-evenly;
 	gap: 2em;
 }
@@ -105,7 +105,7 @@ nav div ul li{
 	color: #96d86d;
 	border-radius: 2rem;
 	padding:4rem;
-	max-width: 40%;
+	max-width: 32%;
 	padding-bottom: 4rem;
 	padding-top: 4rem;
 }
@@ -153,8 +153,49 @@ nav div ul li{
 	padding:2rem;
 	padding-bottom: 4rem;
 	padding-top: 4rem;
+	margin-left: 2rem;
+}
+.dataSources{
+	background-color: #152d0a;
+	color: #96d86d;
+	width: 90%;
+	border-radius: 2rem;
+	padding:2rem;
+	padding-bottom: 4rem;
+	padding-top: 4rem;
 }
 
+.dataSourceHeading{
+	background-color: #152d0a;
+	color: #96d86d;
+	font-size: 2rem;
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+
+.dataSources ul li,.dataSources ul li a,.dataSources ul{
+	background-color: #152d0a;
+	color: #96d86d;
+}
+
+
+#data-sources{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width:90vw;
+}
+
+
+.upperContainer{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+}
 @media(max-width: 600px){
 	.Recommendations {
 		max-width: 90%;

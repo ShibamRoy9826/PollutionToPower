@@ -1,5 +1,5 @@
 """
-WSGI config for EarthSight project.
+WSGI config for PollutionToPower project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'EarthSight.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PollutionToPower.settings')
 
 application = get_wsgi_application()

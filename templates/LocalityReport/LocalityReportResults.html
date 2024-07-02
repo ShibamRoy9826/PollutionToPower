@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Pollution To Power: Locality Report Results</title>
-	<link rel="stylesheet" type="text/css" href="{% static 'projects/carbonResults.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'projects/localityReportResults.css' %}">
 
 </head>
 <body>
@@ -27,9 +27,10 @@
 
 <!-- Results -->
 <section id="score">
+  <div class="upperContainer">
   <div class="Results">
   	<!-- DUMMY AQI INDEX -->
-    <h1>24.5 AQI </h1>
+    <h1 style="text-align:center;">{{ aqi }}</h1>
     <h4 style="text-align: center;">is the air quality</h4>
 
     <h4 style="margin:1rem;">Some detailed info:</h4>
@@ -62,7 +63,20 @@
         </ul>
     
   </div>
+</div>
     
+<!-- lower region -->
+<div id="data-sources">
+
+  <div class="dataSources">
+    <h1 class="dataSourceHeading">How are we calculating this?</h1>
+    <ul>
+      <li>We are fetching real-time data from sources like AirIQ (AirVisual API) and OpenWeatherMap API.</li>
+      <li>On the basis of the amount of pollutants our website gives recommendations , for example if CO levels are high , our website will show recommendations on how we could possibly live a healthier life.</li>
+    </ul>
+    </div>
+</div>
+
 </section>
 
 <!-- Footer -->
@@ -72,7 +86,7 @@
 <footer>
 
   <h1>Pollution To Power</h1>
-  <p>We love to conserve the nature and so should you! hope you enjoy our website and get in the movement to promote more sustainable development!You can check the project code <a href="https://github.com/ShibamRoy9826/EarthSight">here</a></p>
+  <p>We love to conserve the nature and so should you! hope you enjoy our website and get in the movement to promote more sustainable development!You can check the project code <a href="https://github.com/ShibamRoy9826/PollutionToPower">here</a></p>
 </footer>
 </body>
 </html>

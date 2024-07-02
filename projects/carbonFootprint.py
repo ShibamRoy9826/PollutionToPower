@@ -1,7 +1,7 @@
 import pandas
 
 # Absolute path temporarily
-d=pandas.read_csv("/home/shibamroy/Treasure/EarthSight/projects/importantData.csv")
+d=pandas.read_csv("/home/shibamroy/Treasure/PollutionToPower/projects/importantData.csv")
 
 # Data vars
 ElecCO2={'Hydropower':20,'Gas':490,'Oil':730,'Coal':820,'Nuclear':40,'Wind':11}
@@ -67,6 +67,7 @@ def CalculateTotal(Country, DailyDist, LongDistLand, LongDistAir, ElecBill , Gas
         found=False
 
         return found,total,getPercentage(NVehiclePerYear,total),getPercentage(AirVehiclePerYear,total),getPercentage(LandVehiclePerYear,total),getPercentage(ElecMonthly*12,total),getPercentage(NGMonthly*12,total)
+
 def getPerCapita(Country):
     try:
         return d[d['country']==Country.lower()]['co2_per_capita'].values[0]

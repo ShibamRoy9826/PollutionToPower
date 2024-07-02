@@ -1,5 +1,5 @@
 """
-URL configuration for EarthSight project.
+URL configuration for PollutionToPower project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -20,6 +20,7 @@ from landing import views as landingView
 from projects import views as projectView
 urlpatterns = [
     path('', landingView.home, name="landingPage"),
+    path('contact/', landingView.contact, name="contactPage"),
     path('project/',projectView.allProjects, name="allProjects"),
     path('admin/', admin.site.urls),
     path('carbonCalc/',projectView.carbonCalculator,name="carbonCalc"),

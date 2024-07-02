@@ -8,9 +8,8 @@ import numpy
 import requests
 from geopy.geocoders import Nominatim
 
-key="HIDDEN:)"
-
-
+key=os.environ.get('API_KEY')
+key2=os.environ.get('API_KEY_2')
 
 # Create your views here.
 def allProjects(request):
@@ -32,7 +31,6 @@ def carbonResults(request):
 		moreThanAvg=False
 
 		found,ans,dailyV,airV,landV,elec,gas=carbonFootprint.CalculateTotal(country,daildist,airdist,landdist,elecbill,gasbill)
-
 
 		ans=round(ans, 2)
 		dailyV=round(dailyV,2)
@@ -66,9 +64,16 @@ def carbonResults(request):
 		
 # Locality Report Results
 
+def AQIndex(city,state,country):
+	url=f"http://api.airvisual.com/v2/city?city={city}&state={state}&country={country}&key={key}"
+	response=requests.get(url)
+	if response.status_code == 200:
+		return response.json()
+	else:
+		return None
 
 def AQI(lat,lon):
-	url = f'http://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={lon}&appid={key}'   
+	url = f'http://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={lon}&appid={key2}'   
 	response = requests.get(url)
 	if response.status_code == 200:
 		return response.json()
@@ -91,11 +96,13 @@ def localityReportResults(request):
 		state = request.GET["State"]
 		city = request.GET["City"]
 		lat_lon = get_lat_lon(country, state, city)
+		# print("Got the latitude and longitude: ",lat_lon)
 
-		# data=AQI(lat_lon[0],lat_lon[1])
-		# Temporary
-		data={'coord': {'lon': 91.2824, 'lat': 23.8312}, 'list': [{'main': {'aqi': 1}, 'components': {'co': 317.1, 'no': 0, 'no2': 3.68, 'o3': 49.35, 'so2': 0.87, 'pm2_5': 8.91, 'pm10': 9.97, 'nh3': 1.74}, 'dt': 1719763015}]}
+		data=AQI(lat_lon[0],lat_lon[1])
 
+		# print(data)
+		# Temporary to be removed
+		# data={'coord': {'lon': 91.2824, 'lat': 23.8312}, 'list': [{'main': {'aqi': 1}, 'components': {'co': 317.1, 'no': 0, 'no2': 3.68, 'o3': 49.35, 'so2': 0.87, 'pm2_5': 8.91, 'pm10': 9.97, 'nh3': 1.74}, 'dt': 1719763015}]}
 
 		dataMod={'co':data['list'][0]['components']['co'],
 		'no':data['list'][0]['components']['no'],
@@ -104,7 +111,8 @@ def localityReportResults(request):
 		'so2':data['list'][0]['components']['so2'],
 		'pm2_5':data['list'][0]['components']['pm2_5'],
 		'pm10':data['list'][0]['components']['pm10'],
-		'nh3':data['list'][0]['components']['pm2_5']
+		'nh3':data['list'][0]['components']['pm2_5'],
+		'aqi':AQIndex(city,state,country)["data"]["current"]["pollution"]["aqius"]
 		}
 
 		components=data['list'][0]['components']

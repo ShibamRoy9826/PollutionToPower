@@ -27,13 +27,18 @@
 
 <!-- Results -->
 <section id="score">
+  <div class="upperContainer">
   <div class="Results">
     <h1>{{carbon}} Tonnes</h1>
     <h4>is your total annual carbon emissions</h4>
 
     <div class="Info">   
        <!-- Whether Good Score -->
-        {% if carbon > 2.5 %}
+       {% if not moreThanAvg %}
+       <h2 class="bigTextScore">
+          - It's a Great Score!
+        </h2>
+        {% elif carbon > 2.5 %}
         <h2 class="bigTextScore">
           - It's Not a Good Score
         </h2>
@@ -55,7 +60,7 @@
         {% endif %}</h1>
 
         <!-- If the country was not found -->
-        {% if found %}
+        {% if  not found %}
         <h4 style="width:80%; text-align: center; margin-top:1rem;">Sorry, your country was not found, the global average was used instead</h4>
         {% endif %}
 
@@ -91,10 +96,27 @@
             <span class="list-icon">&#8227;</span> Your contributions to carbon dioxide with natural gas is {{ gas }} %
           </li>
         </ul>
-    
   </div>
+</div>
+
+<!-- lower region -->
+<div id="data-sources">
+
+  <div class="dataSources">
+    <h1 class="dataSourceHeading">How are we calculating this?</h1>
+    <ul>
+      <li>Inorder to calculate this result, we have calculated data from sources like <a href="https://dewesoft.com/blog/countries-electricity-source">Dewesoft</a>, <a href="https://www.statista.com/statistics/263492/electricity-prices-in-selected-countries/">Statista</a> ,<a href="https://www.ourworldindata.org/">OurWorldInData</a></li>
+      <li>We have combined data from all the sources and calculated per capita carbon emissions of different countries.</li>
+      <li>We pre-process the input data and Calculate , how much carbon a person is contributing via a particular source.</li>
+
+    </ul>
+    </div>
+</div>
+
     
 </section>
+
+
 
 <!-- Footer -->
 <div class="wavyCurve">
@@ -103,7 +125,8 @@
 <footer>
 
   <h1>Pollution To Power</h1>
-  <p>We love to conserve the nature and so should you! hope you enjoy our website and get in the movement to promote more sustainable development!You can check the project code <a href="https://github.com/ShibamRoy9826/EarthSight">here</a></p>
+  <p>We love to conserve the nature and so should you! hope you enjoy our website and get in the movement to promote more sustainable development!You can check the project code <a href="https://github.com/ShibamRoy9826/PollutionToPower">here</a></p>
+  
 </footer>
 </body>
 </html>

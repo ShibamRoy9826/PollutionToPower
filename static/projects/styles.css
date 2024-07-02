@@ -13,6 +13,21 @@ body {
 	overflow-x: hidden;
 }
 
+/*Navbar*/*{
+	background-color: #96d86d;
+	font-family: "Ubuntu",sans-serif;
+	color: #152d0a;
+	margin:0;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+*::-webkit-scrollbar {
+	  display: none; /* For Chrome, Safari, and Opera */
+}
+body {
+	overflow-x: hidden;
+}
+
 /*Navbar*/
 
 nav{
@@ -71,6 +86,263 @@ nav div ul li{
 		margin-left: 0;
 		margin-right: 0;
 	}
+	.navLink {
+		padding-right:.5rem;
+		padding-left:.5rem;
+
+	}
+	nav div ul {
+		padding: 0;
+	}
+}
+@media(max-width: 392px){
+	.logo h2 {
+		display: none;
+	}
+}
+
+/*Projects container*/
+.project-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.project-card{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding:3rem;
+	background-color: #152d0a;
+	color: #96d86d;
+	font-size: 2rem;
+	text-decoration: none;
+	border: 2px solid #303c2b;
+	transition: 0.6s;
+	border-radius: 2rem;
+	margin:2rem;
+	max-width: 20vw;
+}
+
+.project-card:hover{
+	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+.project-card p{
+	text-align: center;
+	color: #96d86d;
+	background-color: #152d0a;
+	font-size: 0;
+	width: 0;
+	height: 0;
+	transition: 0.5s;
+}
+.project-card:hover p{
+	display: block;
+	width: 70%;
+	height: 100%;
+	font-size: 1rem;
+
+}
+.project-card h3{
+	color: #96d86d;
+	background-color: #152d0a;
+}
+/*Other things*/
+
+section{
+	width: 100vw;
+	min-height: 80vh;
+	min-height: 80svh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.coolButton{
+	border-radius: 1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 0.8rem;
+	padding-bottom: 0.8rem;
+	background-color: #152d0a;
+	color: #96d86d;
+	font-size: 2rem;
+	text-decoration: none;
+	border: 2px solid #303c2b;
+	transition: 0.6s;
+	&:hover,
+  	&:focus { 
+   	 border-color: var(--hover);
+   	 color: #16a046;
+  }
+}
+
+.coolButton:hover,
+.coolButton:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+
+/*Curves*/
+
+.wavyCurve{
+	display: flex;
+	background-color: #94d474;
+}
+
+/*Footer*/
+footer{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	background-color: #1e361a;
+	justify-content: center;
+	align-items: center;
+	padding-bottom:1em;
+	margin:0;
+}
+
+footer h1{
+	color: #98d776;
+	background-color: #1f361b;
+}
+
+footer p{
+	color:#98d776;
+	background-color: #1f361b;
+	width: 40%;
+	text-align: center;
+	margin:1rem;
+}
+
+footer p a{
+	color:#98d776;
+	background-color: #1f361b;
+	width: 40%;
+	text-align: center;
+
+}
+
+
+/*#footerLinks{
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	background-color: #1e361a;
+}
+
+footer ul li{
+	background-color: #1e361a;
+
+}
+
+.link{
+	color:white;
+	display: flex;
+	flex-direction: column;
+	background-color: #1e361a;
+	margin: 1rem;
+	text-decoration: none;
+
+}
+
+*/
+
+
+/*Media queries*/
+
+@media(max-width: 768px){
+	.links{
+		display: hidden;
+	}
+	.WelcomeText{
+		width: 100%;
+	}
+	.logo{
+		margin-left: 0.5rem;
+	}
+	.project-container{
+		display: flex;
+		flex-direction: column;
+}
+	.project-card{
+		padding:4rem;
+		margin: 1rem;
+	}
+	#carbon-card{
+		margin-top: 4rem;
+	}
+
+}
+@media(max-width: 255px){
+	footer h1 {
+		font-size: 1.5em;
+	}
+	
+}
+
+nav{
+	position: absolute;
+	display: flex;
+	width: 100vw;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 1.5rem;
+	z-index: 1000;
+}
+nav div ul {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+}
+nav div ul li{
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+.logo{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-left: 3rem;
+	font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.navLink{
+	text-decoration: none;
+	border-radius: 1rem;
+	padding-top:0.7rem;
+	padding-bottom:0.7rem;
+	padding-right:1.5rem;
+	padding-left:1.5rem;
+	transition: 0.8s;
+}
+
+.navLink:hover{
+	background-color: #152d0a;
+	color:#96d86d;
+}
+
+#selected{
+	background-color: #152d0a;
+	color:#96d86d;
+}
+
+/* responsive nav */
+@media(max-width: 768px){
+	nav div ul li{
+		margin-left: 0;
+		margin-right: 0;
+	}
+	
 	.navLink {
 		padding-right:.5rem;
 		padding-left:.5rem;

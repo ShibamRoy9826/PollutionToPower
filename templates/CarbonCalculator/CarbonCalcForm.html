@@ -38,32 +38,32 @@
 <section>
 <div class="container" data-aos="zoom-in">
         <h1 class="heading" data-aos="fade-in">Carbon Footprint Calculator</h1>
-        <form action="/carbonResults">
+        <form action="/carbonResults" class="form-group field">
             {%csrf_token%}
-          <label for="Country" class="form-label">Which Country do you belong to?</label>
+          <!-- <label for="Country" class="form-label">Which Country do you belong to?</label> -->
           <input type="text" name="Country" id="Country"placeholder="Your country name, for ex. India" class="input-field" required>
 
 
-          <label for="DailyDist" class="form-label">
-            How much distances do you cover daily by vehicles?
-          </label>
+          <!-- <label for="DailyDist" class="form-label"> -->
+            <!-- How much distances do you cover daily by vehicles? -->
+          <!-- </label> -->
           <input type="number"  inputmode='numeric' name="DailyDist" id="DailyDist" placeholder="Your daily vehicle distance in km, for ex. 3" class="input-field" required>
 
 
-          <label for="AirDist" class="form-label">How long distances do you cover by air vehicles each year?</label>
+          <!-- <label for="AirDist" class="form-label">How long distances do you cover by air vehicles each year?</label> -->
           <input type="number" inputmode='numeric' name="AirDist" id="AirDist" placeholder="Your distances covered by air vehicles in km, for ex. 600" class="input-field" required>
 
-          <label for="LandDist" class="form-label">How long distances do you cover each in trains ,etc.?</label>
+          <!-- <label for="LandDist" class="form-label">How long distances do you cover each in trains ,etc.?</label> -->
           <input type="number" inputmode='numeric' name="LandDist" id="LandDist" placeholder="Your distances covered by land vehicles in km, for ex. 800" class="input-field" required>
           
 
-          <label for="ElecBill" class="form-label" >What is your monthly electricity bill?</label>
+          <!-- <label for="ElecBill" class="form-label" >What is your monthly electricity bill?</label> -->
           <input type="number"  inputmode='numeric' name="ElecBill" id="ElecBill" placeholder="Your monthly electricity bill in $, for ex. 40" class="input-field" required>
 
-          <label for="GasBill" class="form-label">What is your monthly gas bill</label>
+          <!-- <label for="GasBill" class="form-label">What is your monthly gas bill</label> -->
           <input type="number"  inputmode='numeric' name="GasBill" id="GasBill" placeholder="Your monthly gas bill in $, for ex. 10" class="input-field" required >
 
-          <input type="submit" id="submitButton" name="SubmitButton" class="coolButton">
+          <input type="submit" id="submitButton" name="SubmitButton" class="coolButton" >
 
         </form>
       </div>

@@ -123,6 +123,10 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 input[type="number"] {
     -moz-appearance: textfield;
+    transition: 0.3s;
+}
+input[type=text]{
+	transition: 0.3s;
 }
 
 form input{
@@ -144,10 +148,24 @@ form input{
 
 }
 
-label{
-	background-color:#1f371c;
-	color: #86c16f;
+
+input[type="text"]:focus{
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 2px solid #86c16f;
+	outline: none;
+	font-size: 1.5rem;
 }
+input[type="number"]:focus{
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 2px solid #86c16f;
+	outline: none;
+	font-size: 1.5rem;
+}
+
 
 /*Other things*/
 .heading{

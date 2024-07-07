@@ -204,7 +204,9 @@ footer{
 	justify-content: center;
 	align-items: center;
 	padding-bottom:1em;
+	padding-top: 1rem;
 	margin:0;
+	border:none;
 }
 
 footer h1{
@@ -412,7 +414,6 @@ nav div ul li{
 
 section{
 	width: 100vw;
-	min-height: 80vh;
 	min-height: 80svh;
 	display: flex;
 	justify-content: center;

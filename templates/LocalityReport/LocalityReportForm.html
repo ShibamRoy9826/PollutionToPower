@@ -36,7 +36,7 @@
 </nav>
 
 <section>
-<div class="container">
+<div class="container" data-aos="zoom-in">
         <h1>Locality Report</h1>
         <form action="/localityReportResults">
             {%csrf_token%}
@@ -65,5 +65,20 @@
   <h1>Pollution To Power</h1>
   <p>We love to conserve the nature and so should you! hope you enjoy our website and get in the movement to promote more sustainable development!You can check the project code <a href="https://github.com/ShibamRoy9826/PollutionToPower">here</a></p>
 </footer>
+
+
+<!-- AOS animations-->
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script type="text/javascript">
+  AOS.init();
+    AOS.init({
+
+        offset: 100, // offset (in px) from the original trigger point
+        duration: 400
+
+    });
+</script>
 </body>
 </html>

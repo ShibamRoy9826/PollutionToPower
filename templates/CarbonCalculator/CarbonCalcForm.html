@@ -6,6 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pollution to Power: Carbon Calculator</title>
 <link rel="stylesheet" type="text/css" href="{% static 'projects/carbonCalc.css' %}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -27,23 +36,32 @@
 </nav>
 
 <section>
-<div class="container">
-        <h1>Carbon Footprint Calculator</h1>
+<div class="container" data-aos="zoom-in">
+        <h1 class="heading" data-aos="fade-in">Carbon Footprint Calculator</h1>
         <form action="/carbonResults">
             {%csrf_token%}
-          <!-- <label>1.Which Country do you belong to?</label> -->
-          <input type="text" name="Country" id="Country"placeholder="Your country name, for ex. India" required>
-          <!-- <label>2.How much distances do you cover daily by vehicles(in km)?</label> -->
-          <input type="number"  inputmode='numeric' name="DailyDist" id="DailyDist" placeholder="Your daily vehicle distance in km, for ex. 3" required>
-          <!-- <label>3.How long distances do you cover by Aeroplanes each year?(in km)(enter 0 if not applicable)</label> -->
-          <input type="number" inputmode='numeric' name="AirDist" id="AirDist" placeholder="Your distances covered by air vehicles in km, for ex. 600" required>
-          <!-- <label>4.How much long distances do you cover each year, in train,etc.?(in km)(enter 0 if not applicable)</label> -->
-          <input type="number" inputmode='numeric' name="LandDist" id="LandDist" placeholder="Your distances covered by land vehicles in km, for ex. 800" required>
-          <!-- <label>5.What is your monthly electricity bill? (in $)</label> -->
-          <input type="number"  inputmode='numeric' name="ElecBill" id="ElecBill" placeholder="Your monthly electricity bill in $, for ex. 40" required>
+          <label for="Country" class="form-label">Which Country do you belong to?</label>
+          <input type="text" name="Country" id="Country"placeholder="Your country name, for ex. India" class="input-field" required>
 
-          <!-- <label>6.What is your monthly gas bill? (in $)</label> -->
-          <input type="number"  inputmode='numeric' name="GasBill" id="GasBill" placeholder="Your monthly gas bill in $, for ex. 10" required>
+
+          <label for="DailyDist" class="form-label">
+            How much distances do you cover daily by vehicles?
+          </label>
+          <input type="number"  inputmode='numeric' name="DailyDist" id="DailyDist" placeholder="Your daily vehicle distance in km, for ex. 3" class="input-field" required>
+
+
+          <label for="AirDist" class="form-label">How long distances do you cover by air vehicles each year?</label>
+          <input type="number" inputmode='numeric' name="AirDist" id="AirDist" placeholder="Your distances covered by air vehicles in km, for ex. 600" class="input-field" required>
+
+          <label for="LandDist" class="form-label">How long distances do you cover each in trains ,etc.?</label>
+          <input type="number" inputmode='numeric' name="LandDist" id="LandDist" placeholder="Your distances covered by land vehicles in km, for ex. 800" class="input-field" required>
+          
+
+          <label for="ElecBill" class="form-label" >What is your monthly electricity bill?</label>
+          <input type="number"  inputmode='numeric' name="ElecBill" id="ElecBill" placeholder="Your monthly electricity bill in $, for ex. 40" class="input-field" required>
+
+          <label for="GasBill" class="form-label">What is your monthly gas bill</label>
+          <input type="number"  inputmode='numeric' name="GasBill" id="GasBill" placeholder="Your monthly gas bill in $, for ex. 10" class="input-field" required >
 
           <input type="submit" id="submitButton" name="SubmitButton" class="coolButton">
 
@@ -61,5 +79,21 @@
   <h1>Pollution To Power</h1>
   <p>We love to conserve the nature and so should you! hope you enjoy our website and get in the movement to promote more sustainable development!You can check the project code <a href="https://github.com/ShibamRoy9826/PollutionToPower">here</a></p>
 </footer>
+
+
+
+<!-- AOS animations-->
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script type="text/javascript">
+  AOS.init();
+    AOS.init({
+
+        offset: 100, // offset (in px) from the original trigger point
+        duration: 400
+
+    });
+</script>
 </body>
 </html>

@@ -38,17 +38,17 @@
 
 <!-- Home Section -->
 <section id="home">
-  <div class="WelcomeText">
+  <div class="WelcomeText" data-aos="fade-in">
     <h1 id="heading">Welcome to Pollution To Power!</h1>
-    <h3 id="sub-heading">Let's be aware of ourselves, and make this world a better place:)</h3>
-    <p id="para">Welcome to Pollution To Power, where you can access real-time air quality data and essential environmental indicators for your locality. Calculate your carbon footprint with our user-friendly tool and receive personalized suggestions to reduce your emissions. Empower yourself with the knowledge and resources to make a positive impact on your environment and contribute to a sustainable future.</p>
+    <h3 id="sub-heading" data-aos="fade-in">Let's be aware of ourselves, and make this world a better place:)</h3>
+    <p id="para" data-aos="fade-in">Welcome to Pollution To Power, where you can access real-time air quality data and essential environmental indicators for your locality. Calculate your carbon footprint with our user-friendly tool and receive personalized suggestions to reduce your emissions. Empower yourself with the knowledge and resources to make a positive impact on your environment and contribute to a sustainable future.</p>
 
-    <a href="/project" class="coolButton">Let's Go🌲🌲</a>
+    <a href="/project" class="coolButton" data-aos="fade-in">Let's Go🌲🌲</a>
   </div>
 
   <!-- Image -->
 
-    <img class="image1" src="{% static 'landing/Images/background.jpg' %}" alt="Nature related image" >
+    <img class="image1" src="{% static 'landing/Images/background.jpg' %}" alt="Nature related image" data-aos="zoom-in" >
 
 </section>
 
@@ -61,7 +61,7 @@
 </div>
 
 <section id="about">
-  <div class="About">
+  <div class="About" data-aos="fade-in">
     <h1 id="about-heading">About</h1>
     <p id="about-para">
       Our planet faces unprecedented environmental challenges from air pollution to carbon emission that contribute to this climate change we also withness the rising temperatures due to pollution which is making it very hard for te people to go outdoors. <br><br> This scorching heat even became a reason for the end of many lives. 
@@ -74,26 +74,26 @@
 
 
   <!-- About section image -->
-  <img class="image1" src="{% static 'landing/Images/about.jpg' %}" alt="Nature related image" >
+  <img class="image1" src="{% static 'landing/Images/about.jpg' %}" alt="Nature related image" data-aos="zoom-in" >
 
 </section>
 
 <!-- Data Sources -->
 <section id="data-sources">
   <div class="DataSourcesContainer">
-    <h1 id="data-heading">Data Sources</h1>
-    <p id="data-para">I acknowledge all the data sources without which this project may not have been possible!
+    <h1 id="data-heading" data-aos="fade-in">Data Sources</h1>
+    <p id="data-para" data-aos="fade-in">I acknowledge all the data sources without which this project may not have been possible!
   </p>
   <div class="data-images-container">
-    <a href="https://dewesoft.com/blog/countries-electricity-source">
+    <a href="https://dewesoft.com/blog/countries-electricity-source" data-aos="zoom-in">
     <img class="dataSourceImages" src="{% static 'landing/Images/Dewesoft.png' %}" alt="Dewesoft" >
   </a>
 
-  <a href="https://www.statista.com/statistics/263492/electricity-prices-in-selected-countries/">
+  <a href="https://www.statista.com/statistics/263492/electricity-prices-in-selected-countries/" data-aos="zoom-in">
     <img class="dataSourceImages" src="{% static 'landing/Images/Statista.png' %}" alt="Statista" >
   </a>
 
-<a href="https://www.ourworldindata.org/">
+<a href="https://www.ourworldindata.org/" data-aos="zoom-in">
     <img class="dataSourceImages" src="{% static 'landing/Images/OurWorldInData.jpg' %}" alt="OurWorldInData" >
   </a>
   </div>
@@ -119,5 +119,20 @@
   <h1>Pollution To Power</h1>
   <p>We love to conserve the nature and so should you! hope you enjoy our website and get in the movement to promote more sustainable development!You can check the project code <a href="https://github.com/ShibamRoy9826/PollutionToPower">here</a></p>
 </footer>
+
+
+<!-- AOS animations-->
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script type="text/javascript">
+  AOS.init();
+    AOS.init({
+
+        offset: 100, // offset (in px) from the original trigger point
+        duration: 800
+
+    });
+</script>
 </body>
 </html>

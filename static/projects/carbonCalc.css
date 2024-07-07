@@ -144,8 +144,17 @@ form input{
 
 }
 
-/*Other things*/
+label{
+	background-color:#1f371c;
+	color: #86c16f;
+}
 
+/*Other things*/
+.heading{
+	font-family: "Exo 2", sans-serif;
+	font-optical-sizing: auto;
+	font-style: bold;
+}
 section{
 	width: 100vw;
 	min-height: 100vh;

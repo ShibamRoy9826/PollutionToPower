@@ -101,8 +101,6 @@ def localityReportResults(request):
 		data=AQI(lat_lon[0],lat_lon[1])
 
 		# print(data)
-		# Temporary to be removed
-		# data={'coord': {'lon': 91.2824, 'lat': 23.8312}, 'list': [{'main': {'aqi': 1}, 'components': {'co': 317.1, 'no': 0, 'no2': 3.68, 'o3': 49.35, 'so2': 0.87, 'pm2_5': 8.91, 'pm10': 9.97, 'nh3': 1.74}, 'dt': 1719763015}]}
 
 		dataMod={'co':data['list'][0]['components']['co'],
 		'no':data['list'][0]['components']['no'],
@@ -112,8 +110,9 @@ def localityReportResults(request):
 		'pm2_5':data['list'][0]['components']['pm2_5'],
 		'pm10':data['list'][0]['components']['pm10'],
 		'nh3':data['list'][0]['components']['pm2_5'],
-		'aqi':AQIndex(city,state,country)["data"]["current"]["pollution"]["aqius"]
-		}
+		   'aqi':AQIndex(city,state,country)["data"]["current"]["pollution"]["aqius"]}
+
+		# print("This is the AQI Index", AQIndex(city,state,country)["data"]["current"]["pollution"]["aqius"])
 
 		components=data['list'][0]['components']
 		suggestions = []

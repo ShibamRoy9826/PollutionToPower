@@ -510,6 +510,28 @@ footer ul li{
 }
 
 */
+/*Loader*/
+
+#loader {
+/*	position: absolute;*/
+	z-index: 10000;
+	background-color:black;
+	width: 100svw;
+	height: 100svh;
+	color:white;
+	transition: 1s all linear;
+	overflow: hidden;
+	display:flex;
+  justify-content: center;
+  align-items: center;
+/*  background-color: #96d86d;*/
+}
+
+.loading-image{
+	height: 6rem;
+	width: 6rem;
+}
+
 
 
 /*Media queries*/

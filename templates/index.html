@@ -19,6 +19,55 @@
 
 
 <body>
+<style type="text/css">
+  /*Loader*/
+
+#loader {
+/*  position: absolute;*/
+  z-index: 10000;
+/*  background-color:black;*/
+  width: 100svw;
+  height: 100svh;
+  color:white;
+  transition: 1s all linear;
+  overflow: hidden;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #96d86d;
+}
+
+.loading-image{
+  height: 6rem;
+  width: 6rem;
+  background-color: transparent;
+}
+
+
+.hidden{
+  visibility: "hidden";
+}
+
+
+.popUp{
+    animation: popUpAnimation both;
+    animation-timeline: view(70% 5%);
+
+}
+@keyframes popUpAnimation{
+    from{
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    }to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+</style>
+  <!-- Loader -->
+    <div id="loader">
+        <img src="{% static 'loader.svg' %}" class="loading-image" />
+    </div>
 <!-- Navbar -->
 <nav>
   <div class="logo">
@@ -38,9 +87,9 @@
 
 <!-- Home Section -->
 <section id="home">
-  <div class="WelcomeText" data-aos="fade-in">
+  <div class="WelcomeText">
     <h1 id="heading">Welcome to Pollution To Power!</h1>
-    <h3 id="sub-heading" data-aos="fade-in">Let's be aware of ourselves, and make this world a better place:)</h3>
+    <h3 id="sub-heading">Let's be aware of ourselves, and make this world a better place:)</h3>
     <p id="para" data-aos="fade-in">Welcome to Pollution To Power, where you can access real-time air quality data and essential environmental indicators for your locality. Calculate your carbon footprint with our user-friendly tool and receive personalized suggestions to reduce your emissions. Empower yourself with the knowledge and resources to make a positive impact on your environment and contribute to a sustainable future.</p>
 
     <a href="/project" class="coolButton" data-aos="fade-in">Let's Go🌲🌲</a>
@@ -61,7 +110,7 @@
 </div>
 
 <section id="about">
-  <div class="About" data-aos="fade-in">
+  <div class="About popUp">
     <h1 id="about-heading">About</h1>
     <p id="about-para">
       Our planet faces unprecedented environmental challenges from air pollution to carbon emission that contribute to this climate change we also withness the rising temperatures due to pollution which is making it very hard for te people to go outdoors. <br><br> This scorching heat even became a reason for the end of many lives. 
@@ -74,13 +123,13 @@
 
 
   <!-- About section image -->
-  <img class="image1" src="{% static 'landing/Images/about.jpg' %}" alt="Nature related image" data-aos="zoom-in" >
+  <img class="image1 popUp" src="{% static 'landing/Images/about.jpg' %}" alt="Nature related image" data-aos="zoom-in" >
 
 </section>
 
 <!-- Data Sources -->
 <section id="data-sources">
-  <div class="DataSourcesContainer">
+  <div class="DataSourcesContainer popUp">
     <h1 id="data-heading" data-aos="fade-in">Data Sources</h1>
     <p id="data-para" data-aos="fade-in">I acknowledge all the data sources without which this project may not have been possible!
   </p>
@@ -114,9 +163,13 @@
   <p>We love to conserve the nature and so should you! hope you enjoy our website and get in the movement to promote more sustainable development!You can check the project code <a href="https://github.com/ShibamRoy9826/PollutionToPower">here</a></p>
 </footer>
 
+<!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<!-- Other scripts -->
+<script type="text/javascript" src="{% static 'script.js' %}"></script>
 
 <!-- AOS animations-->
- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!--  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script type="text/javascript">
@@ -127,6 +180,6 @@
         duration: 800
 
     });
-</script>
+</script> -->
 </body>
 </html>

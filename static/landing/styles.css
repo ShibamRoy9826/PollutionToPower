@@ -79,11 +79,12 @@ nav div ul li{
 	nav div ul {
 		padding: 0;
 	}
-}
-@media(max-width: 392px){
+
 	.logo h2 {
 		display: none;
 	}
+}
+@media(max-width: 392px){
 	.navlink {
 		border-radius: 0;
 
@@ -277,6 +278,8 @@ font-size: 5rem;
 	font-family: "Exo 2", sans-serif;
 	font-size: 2rem;
   font-weight: bold;
+  
+  overflow-x: scroll;
   margin:2rem;
 }
 
@@ -299,6 +302,9 @@ font-size: 5rem;
 		height: 10vh;
 		margin-bottom: 1rem;
 
+	}
+	.emailBox{
+		width: 80%;
 	}
 }
 @media(max-width: 294px){

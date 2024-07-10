@@ -79,6 +79,9 @@ nav div ul li{
 	nav div ul {
 		padding: 0;
 	}
+	.logo h2 {
+		display: none;
+	}
 }
 @media(max-width: 392px){
 	.logo h2 {

@@ -79,12 +79,11 @@ nav div ul li{
 	nav div ul {
 		padding: 0;
 	}
-}
-@media(max-width: 392px){
 	.logo h2 {
 		display: none;
 	}
 }
+
 
 /*Form*/
 .container{
